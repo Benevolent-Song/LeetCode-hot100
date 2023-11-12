@@ -2,7 +2,7 @@
 package com.shh;
 public class T18矩阵置零 {
     public static void main(String[] args) {
-    int [][] matrix=new int[][]{{1,1,1},{1,0,1},{1,1,1}};
+    int [][] matrix=new int[][]{{1,1,1},{1,0,1},{1,1,0}};
     Solution18 st18=new Solution18();
     st18.setZeroes(matrix);
     }
