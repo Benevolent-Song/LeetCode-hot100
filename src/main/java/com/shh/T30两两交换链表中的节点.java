@@ -24,10 +24,6 @@ class Solution30 {
     public ListNode swapPairs(ListNode head) {
         List <ListNode>  list=new ArrayList<>();
         ListNode temp=head;
-        if(temp==null||temp.next==null)
-        {
-            return temp;
-        }
         while(temp!=null)
         {
             list.add(temp);
@@ -35,7 +31,6 @@ class Solution30 {
         }
         int length=list.size();//链表的长度
         //在集合中进行调换
-        int times=length/2;//需要进行操作的次数
         for(int i=0;i<length-1;i=i+2)//每次跳两位
         {
          ListNode temp1=list.get(i+1);//暂时保存要被替换的节点
