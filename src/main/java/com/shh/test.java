@@ -5,10 +5,22 @@ import java.util.HashMap;
 
 public class test {
     public static void main(String[] args) {
-        System.out.println((int)'A');//65
-        System.out.println((int)'Z');//90
-        System.out.println((int)'a');//97
-        System.out.println((int)'z');//122
+        // 创建HashMap
+        HashMap<String, String> hashMap = new HashMap<>();
+
+        // 添加键值对
+        hashMap.put("Key1", "Value1");
+        hashMap.put("Key2", "Value2");
+
+        // 替换键值对
+        String oldKey = "Key1";
+        String newValue = "NewValue";
+
+        // 使用replace方法替换值
+        hashMap.replace(oldKey, newValue);
+
+        // 输出修改后的HashMap
+        System.out.println(hashMap);
     }
 }
 
