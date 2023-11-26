@@ -43,3 +43,45 @@ srcPos:源数组要复制的起始位置;
 dest:目的数组;
 destPos:目的数组放置的起始位置;
 length:复制的长度.
+//--------------------------
+T46前序,中序，后序遍历的if里面的内容顺序是固定的
+先:if(root.left!=null)
+  {
+      findall(root.left);
+  }
+后:if(root.right!=null)
+  {
+      findall(root.right);
+  }
+//--------------------------
+T44对节点的val进行大小排序
+对集合中的节点按照val的大小排序
+Collections.sort(list, new Comparator<TreeNode>() {
+    public int compare( TreeNode node1, TreeNode node2) {
+        // 根据节点的val值进行比较
+        return Integer.compare(node1.val, node2.val);
+    }
+});
+//-------------------------
+T40深度优先遍历:
+void dfs(TreeNode root) {
+    if (root == null) {
+        return;
+    }
+    dfs(root.left);
+    dfs(root.right);
+}
+T41广度优先遍历:
+void bfs(TreeNode root) {
+    Queue<TreeNode> queue = new ArrayDeque<>();
+    queue.add(root);
+    while (!queue.isEmpty()) {
+        TreeNode node = queue.poll(); // Java 的 pop 写作 poll()
+        if (node.left != null) {
+            queue.add(node.left);
+        }
+        if (node.right != null) {
+            queue.add(node.right);
+        }
+    }
+}
