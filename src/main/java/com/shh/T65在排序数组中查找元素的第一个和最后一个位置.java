@@ -25,20 +25,20 @@ class Solution65{
         {return new int[]{-1, -1};}
         //对前后有几个target进行判断mid
         int sta=find;
-        System.out.println("index:"+mid);
+        //System.out.println("index:"+mid);
         while(nums[find]==target&&find>0)//前
         {
             find--;
             if(find==0&&nums[find]==target)//增加while中缺少的对第一个元素的判断
             {find=-1;break;}
-            System.out.println("find"+find);
+            //System.out.println("find"+find);
         }
         while(nums[mid]==target&&mid<nums.length-1)//后
         {
             mid++;
             if(mid==nums.length-1&&nums[mid]==target)//增加while中缺少的对最后一个元素的判断
             {mid=nums.length;break;}
-            System.out.println("mid:"+mid);
+            //System.out.println("mid:"+mid);
         }
         if(find==sta)
         {index[0]=find;}else{index[0]=find+1;}
