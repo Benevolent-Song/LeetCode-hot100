@@ -8,7 +8,10 @@ import java.util.stream.Collectors;
 
 public class test {
     public static void main(String[] args) {
-        System.out.println('9'>'1');
+        double m=Math.sqrt(12);
+        double mm=Math.sqrt(15);
+        System.out.println(m);
+        System.out.println(mm);
     }
 }
 
