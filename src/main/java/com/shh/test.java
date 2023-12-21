@@ -8,10 +8,13 @@ import java.util.stream.Collectors;
 
 public class test {
     public static void main(String[] args) {
-        double m=Math.sqrt(12);
-        double mm=Math.sqrt(15);
-        System.out.println(m);
-        System.out.println(mm);
+        List <Integer> list=new ArrayList<>();
+        list.add(1);
+        list.add(1);
+        list.add(1);
+        list.remove(2);
+        System.out.println(list);
+        System.out.println(list.size());
     }
 }
 
